@@ -1,0 +1,351 @@
+<html>
+
+<head>
+    <title>
+    </title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+</head>
+
+<body>
+    <nav style="font-weight:bold;margin-left:3%;margin-top:4% ">
+                <a href="/">HOME</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/about.hbs">ABOUT</a>&nbsp&nbsp&nbsp<a
+                    href="/Users/rakshith/Documents/mernbackend/templates/views/stocks.hbs">STOCKS</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/education.hbs">EDUCATION</a>&nbsp&nbsp&nbsp<a
+                    href="/Users/rakshith/Documents/mernbackend/templates/views/market.hbs">MARKET
+                    DATA</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/broker.hbs">BROKERS</a>
+                <div id="navbar" style="margin-left: 80%;margin-top: -0.9%;"><a
+                        href="/Users/rakshith/Documents/mernbackend/templates/views/register.hbs">REGISTER</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/login.hbs">LOGIN</a> 
+                 </div>       
+            </nav>
+            <caption><h1 id="stocks">STOCK DATA</h1></caption>
+
+    <style>
+        body {
+            background-image:url(https://media.istockphoto.com/videos/abstract-light-blue-soft-background-video-id466111690?s=480x480);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        table {
+            right: 500px;
+            border: 1px solid white;
+
+            position: "relative";
+        }
+        #stocks{
+            font-size: 70px;
+            margin-left:500px;
+            font-family:'Times New Roman', Times, serif;
+        }
+    </style>
+
+    
+    <div id="container"></div>
+
+    <script type="text/babel">
+        var id = document.getElementById("container");
+
+        class Heatmap extends React.Component {
+            render() {
+                var heatStyle = {
+                    backgroundColor: "#FF5733",
+                    marginLeft: this.props.marginLeft,
+                    marginTop: this.props.marginTop,
+                    borderRadius: "20px",
+                    height: 120,
+                    width: 120,
+                    position: "relative",
+                    opacity: 1
+                };
+                const paraStyle = {
+                    position: "absolute",
+                    textAlign: "center", fontWeight: "bold", color: "white", opacity: 1, marginTop: 40
+                }
+                    ;
+
+                return (
+                    <div style={heatStyle}>
+                        <p style={paraStyle}>{this.props.message}</p>
+                    </div>
+                )
+
+            }
+        }
+        class Table extends React.Component {
+            render() {
+                var tableStyle = {
+                    backgroundColor: "#2e2e2c",
+                    borderRadius: 5,
+                    border: "2px solid white",
+                    height: 650,
+                    width: 700,
+                    position: "absolute",
+                    marginLeft: 700,
+                    marginTop: -650,
+                    opacity: 1
+
+                };
+                var headStyle = {
+                    textAlign: "center", color: "white"
+                };
+                var tabStyle = { width: 538, display: "none", visibility: "hidden", position: "absolute", marginRight: -420, marginTop: 150, color: "white" };
+                var thStyle = { color: "white", backgroundColor: "#FF5733" };
+                var btn1 = { boderRadius: 100, marginLeft: 50, backgroundColor: "#0A94B4", position: "relative" };
+                var btn2 = { boderRadius: 5, marginLeft: 180, backgroundColor: "#0A94B4", position: "relative" };
+                var btn3 = { boderRadius: 5, marginLeft: 200, backgroundColor: "#0A94B4", position: "relative" };
+                var td1 = { color: "black", backgroundColor: "white" };
+                var td2 = { color: "blue", backgroundColor: "white" };
+                var a = { color: "black" };
+                var losertd = { color: "red", backgroundColor: "white" };
+
+
+                return (
+                    <div style={tableStyle}>
+
+                    
+
+                        <h1 style={headStyle}>STOCK WATCH</h1>
+                        <table id="displayTable" style={tabStyle} cellpadding="25" cellspacing="6" border="20">
+                            <tr align="center">
+                                <th style={thStyle}>SECURITY</th>
+                                <th style={thStyle}>LTP</th>
+                                <th style={thStyle}>CHANGE</th>
+                                <th style={thStyle}>%CHANGE</th>
+                            </tr>
+                            <tr align="center">
+                                <td style={td1}> <a style={a} href="https://www.bseindia.com/stock-share-price/natural-capsules-ltd/natcaps-re/750684/">
+                                    NATCAPS_RE</a></td>
+                                <td style={td2}>109.30</td>
+                                <td style={td2}>24.40</td>
+                                <td style={td2}>28.74</td>
+
+                            </tr>
+                            <tr>
+                                <td style={td1}><a style={a} href="https://www.bseindia.com/stock-share-price/starlit-power-systems-ltd/starlit/538733/">
+                                    STARLIT</a></td>
+                                <td style={td2}>15.00</td>
+                                <td style={td2}>2.50</td>
+                                <td style={td2}>20.00</td>
+
+                            </tr>
+                            <tr>
+                                <td style={td1}><a style={a} href="https://www.bseindia.com/stock-share-price/austin-engineering-coltd/austeng/522005/">
+                                    AUSTENG</a></td>
+                                <td style={td2}>69.70</td>
+                                <td style={td2}>11.60</td>
+                                <td style={td2}>19.97</td>
+
+                            </tr>
+
+
+                        </table>
+                        <table id="loserTable" style={tabStyle} cellpadding="27" cellspacing="6" border="20">
+                            <tr align="center">
+                                <th style={thStyle}>SECURITY</th>
+                                <th style={thStyle}>LTP</th>
+                                <th style={thStyle}>CHANGE</th>
+                                <th style={thStyle}>%CHANGE</th>
+                            </tr>
+                            <tr align="center">
+                                <td style={td1}> <a style={a} href="https://www.bseindia.com/stock-share-price/vikas-ecotech-ltd/veco-re1/750685/">
+                                    VECO-RE1</a></td>
+                                <td style={td2}>0.42</td>
+                                <td style={losertd}>-0.26</td>
+                                <td style={losertd}>-39.39</td>
+
+                            </tr>
+                            <tr align="center">
+                                <td style={td1}><a style={a} href="https://www.bseindia.com/stock-share-price/gujarat-lease-financing-ltd/glfl/500174/">
+                                    GLFL</a></td>
+                                <td style={td2}>2.80</td>
+                                <td style={losertd}>-0.44</td>
+                                <td style={losertd}>-13.58</td>
+
+                            </tr>
+                            <tr align="center">
+                                <td style={td1}><a style={a} href="https://www.bseindia.com/stock-share-price/east-india-securities-ltd/eis/541053/">
+                                    EIS</a></td>
+                                <td style={td2}>1200</td>
+                                <td style={losertd}>-150.00</td>
+                                <td style={losertd}>-11.11</td>
+
+                            </tr>
+
+
+                        </table>
+                        <table id="activeTable" style={tabStyle} cellpadding="29" cellspacing="6" border="20">
+                            <tr align="center">
+                                <th style={thStyle}>SECURITY</th>
+                                <th style={thStyle}>LTP</th>
+                                <th style={thStyle}>T/O</th>
+                                <th style={thStyle}>VOLUME</th>
+                            </tr>
+                            <tr align="center">
+                                <td style={td1}> <a style={a} href="https://www.bseindia.com/stock-share-price/natural-capsules-ltd/natcaps-re/750684/">
+                                    ICICIBANK</a></td>
+
+                                <td style={td2}>728.00</td>
+                                <td style={td2}>31,947.00</td>
+                                <td style={td2}>44,40,915</td>
+
+                            </tr>
+                            <tr>
+                                <td style={td1}><a style={a} href="https://www.bseindia.com/stock-share-price/starlit-power-systems-ltd/starlit/538733/">
+                                    IDEA</a></td>
+                                <td style={td2}>14.57</td>
+                                <td style={td2}>8447.00</td>
+                                <td style={td2}>5,70,46,483</td>
+
+                            </tr>
+                            <tr>
+                                <td style={td1}><a style={a} href="https://www.bseindia.com/stock-share-price/austin-engineering-coltd/austeng/522005/">
+                                    YESBANK</a></td>
+                                <td style={td2}>13.37</td>
+                                <td style={td2}>2,596.00</td>
+                                <td style={td2}>2,00,15,831</td>
+
+                            </tr>
+
+
+                        </table>
+                        <p>
+                            <button type="button" style={btn1} onClick={fun} >GAINERS</button>
+                            <button type="button" style={btn2} onClick={fun2} >LOSERS</button>
+                            <button type="button" style={btn3} onClick={fun3} >MOST ACTIVE</button>
+
+                        </p>
+
+
+                    </div>
+
+                )
+            }
+        }
+
+
+        class Overall extends React.Component {
+            render() {
+                const boxStyle = {
+                    border: "1px solid white",
+                    width: 500,
+                    borderRadius: 5,
+                    height: 650,
+                    marginLeft: 100,
+                    marginTop: 100,
+                    position: "relative",
+                    backgroundColor: "#2e2e2c"
+                };
+                var heat1Style = { textAlign: "center", color: "white" }
+                return (
+                    <div style={boxStyle}>
+                        <h1 style={heat1Style}>HEAT MAP</h1>
+                        <Heatmap marginLeft="50px" marginTop="30px" message="HDFC
+2767.65
+-0.12 %"/>
+                        <Heatmap marginLeft="200px" marginTop="-120px" message="TATASTEEL
+1109.05
+-0.80 %" />
+                        <Heatmap marginLeft="350px" marginTop="-120px" message="LT
+1781.85
+-1.11 %" />
+                        <Heatmap marginLeft="50px" marginTop="65px" message="KOTAKBANK
+1886.30
+-1.43 %"/>
+                        <Heatmap marginLeft="200px" marginTop="-122px" message="AXISBANK
+663.30
+-1.43 %"/>
+                        <Heatmap marginLeft="350px" marginTop="-115px" message="NESTLEIND
+18993.20
+-1.62 %"/>
+                        <Heatmap marginLeft="50px" marginTop="65px" message="SBIN
+465.35
+-1.66 %"/>
+                        <Heatmap marginLeft="200px" marginTop="-120px" message=" DRREDDY
+4503.35
+-2.06 %"/>
+                        <Heatmap marginLeft="350px" marginTop="-120px" message="ASIANPAINT
+3038.00
+-2.34 %"/>
+
+
+
+
+
+                    </div>
+                )
+            }
+        }
+        class Final extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <Overall />
+                        <Table />
+                    </div>
+                )
+            }
+        }
+
+
+        function fun() {
+
+
+            if (document.getElementById("displayTable").style.display === "none" && (document.getElementById("loserTable").style.display === "none" || document.getElementById("activeTable").style.display === "none")) {
+
+                document.getElementById("displayTable").style.display = "inline"
+                document.getElementById("displayTable").style.visibility = "visible"
+            }
+            if (document.getElementById("loserTable").style.display === "inline") {
+                document.getElementById("loserTable").style.display = "none"
+            }
+            if (document.getElementById("activeTable").style.display === "inline") {
+                document.getElementById("activeTable").style.display = "none"
+            }
+
+            // else { document.getElementById("displayTable").style.display = "none" };
+        }
+        function fun2() {
+
+
+            if (document.getElementById("loserTable").style.display === "none" && (document.getElementById("activeTable").style.display === "none" || document.getElementById("displayTable").style.display === "none")) {
+
+                document.getElementById("loserTable").style.display = "inline"
+                document.getElementById("loserTable").style.visibility = "visible"
+            }
+            if (document.getElementById("displayTable").style.display === "inline") {
+                document.getElementById("displayTable").style.display = "none"
+            }
+            if (document.getElementById("activeTable").style.display === "inline") {
+                document.getElementById("activeTable").style.display = "none"
+            }
+
+            // else {
+            //     document.getElementById("loserTable").style.display = "none"
+            // };
+        }
+
+        function fun3() {
+
+
+            if (document.getElementById("activeTable").style.display === "none" && (document.getElementById("displayTable").style.display === "none" || document.getElementById("loserTable").style.display === "none")) {
+
+                document.getElementById("activeTable").style.display = "inline"
+                document.getElementById("activeTable").style.visibility = "visible"
+            }
+            if (document.getElementById("displayTable").style.display === "inline") {
+                document.getElementById("displayTable").style.display = "none"
+            }
+            if (document.getElementById("loserTable").style.display === "inline") {
+                document.getElementById("loserTable").style.display = "none"
+            }
+
+            // else { document.getElementById("activeTable").style.display = "none" };
+        }
+
+        ReactDOM.render(<Final />, id);
+
+    </script>
+</body>
+
+</html>

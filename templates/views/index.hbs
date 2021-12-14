@@ -1,0 +1,341 @@
+<html>
+
+<head>
+    <title>
+    </title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-image: url("https://previews.123rf.com/images/ashdesign/ashdesign1010/ashdesign101000009/8127338-financial-stock-market-data-blue-background.jpg");
+
+            opacity: 1;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+
+        }
+        div{
+            box-shadow: grey;
+        }
+            
+        }
+        }
+
+
+        .center {
+            display: block;
+            margin-left: 30%;
+            margin-right: auto;
+            margin-top: -140;
+
+
+
+        }
+
+        #companys {
+            display: block;
+            margin-left: 80%;
+            margin-right: auto;
+            margin-top: -140;
+            position: ;
+
+
+
+        }
+
+        #company {
+            font-size: larger;
+            background-color: rgb(245, 141, 6);
+            border: "10px solid black";
+
+        }
+
+        #buttons {
+            margin-right: 500;
+            margin-right: auto;
+            margin-top: -100;
+            float: left;
+            margin-left: -1200;
+            height: 50%;
+            width: 150%;
+            margin-top: 90;
+            position: relative;
+            width: 300
+        }
+
+        button {
+            position: relative;
+            padding: 1px;
+            background-color: black;
+            border: 10 px blue;
+            color: white;
+
+        }
+
+        #div1 {
+
+
+            position:relative;
+            margin-top:-100px;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+       
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+       
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+       
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+
+        #navtag {
+            margin-left: -1200px;
+            margin-top: 100;
+        }
+
+
+
+        
+    </style>
+    
+                         
+
+
+            
+                
+
+        </div>
+    </header>
+</head>
+
+<body>
+    {{>navbar}}
+    <div id="App"></div>
+
+
+    <div id="div1">
+        <img id="img1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSalA5ZBQG5hkMBoQw_UbiXkT1QPeyPbjosaQ&usqp=CAU"
+            height="500px" width="550px" margin-top= "200px"></img>
+    </div>
+    
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="https://www.bseindia.com/include/images/slide1.jpg"
+                style="width:65%; margin-left:500px;margin-top:160px">
+            <div class="text" style="color:black;margin-left: 320px;margin-top:430px;font-weight: bold;top:100px;">
+                <dl>
+                    <dd
+                        style="text-align:center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size:20px;font-weight: bolder;">
+                        Shri Ashishkumar Chauhan, MD & CEO, BSE</br> interacting with Shri
+                        Nitin Gadkari<br>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="https://www.bseindia.com/include/images/slide2.jpg"
+                style="width:65%;margin-left:500px;margin-top:160px">
+            <div class="text" style="color:black;margin-left: 320px;margin-top:430px;font-weight: bold;top:100px;">
+                <dl>
+                    <dd
+                        style="text-align:center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size:20px;font-weight: bolder;">
+                        Shri Ashishkumar Chauhan, MD & CEO,</br> BSE welcoming Shri Ajay
+                        Tyagi,
+                        Chairman, SEBI<br>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="https://www.bseindia.com/include/images/startupslaunch.jpg"
+                style="width:65%;margin-left:500px;margin-top:160px">
+            <div class="text" style="color:black;margin-left: 320px;margin-top:430px;font-weight: bold;top:100px;">
+                <dl>
+                    <dd
+                        style="text-align:center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size:20px;font-weight: bolder;">
+                        Launch of the platform BSE Startups
+
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="https://www.bseindia.com/include/images/wa005.jpg"
+                style="width:65%;margin-left:500px;margin-top:160px">
+            <div class="text" style="color:black;margin-left: 320px;margin-top:430px;font-weight: bold;top:100px;">
+                <dl>
+                    <dd
+                        style="text-align:center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size:20px;font-weight: bolder;">
+                        Visit of Gujarat CM Shri Bhupendrabhai Patel</br>on 2nd Decemeber 2021
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="https://www.bseindia.com/include/images/Lucknow_Municipal_Corp.jpg"
+                style="width:65%;margin-left:500px;margin-top:160px">
+            <div class="text" style="color:black;margin-left: 320px;margin-top:430px;font-weight: bold;top:100px;">
+                <dl>
+                    <dd
+                        style="text-align:center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size:20px;font-weight: bolder;">
+                        Presenting a memento to Hon’ble Chief Minister of </br>Uttar Pradesh,
+                        Shri Yogi Aditynath
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center;margin-left:680px">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+    <script>
+        var slideIndex = 0;
+showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var         dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000); 
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <script>
+
+        $(document).ready(setInterval(function () {
+            $("#div1").fadeOut(1000).delay(900).fadeIn(1000).delay(900).fadeOut(1000);
+        }, 1000));
+
+
+        
+    </script>
+</body>
+
+</html>

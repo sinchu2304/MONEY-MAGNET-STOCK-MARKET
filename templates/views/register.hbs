@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <title>REGISTER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            background-size: cover;
+            background-image:url("https://www.erasmus-dashboard.eu/photos/background.jpg");
+            background-repeat:no-repeat;
+        }
+        #heading1 {
+            font-size: 40px;
+            font-family: "Georgia";
+            margin-top: 7%;
+        }
+        
+        #div1 {
+            text-align: center;
+            //border-style: solid;
+            //border-color: black;
+            //border-width: 30;
+            //padding: 30px;
+            margin:auto;
+            
+            width: 600px;
+            height: 550px;
+            position: absolute;
+            right: 400px;
+        }
+        
+        #email {
+            font-size: 25px;
+            font-family: "Times New Roman";
+            padding: 20px;
+            border-style: solid;
+        }
+        
+        #password {
+            font-size: 25px;
+            font-family: "Times New Roman";
+            padding: 20px;
+            border-style: solid;
+        }
+        
+        #confirm_password {
+            font-size: 25px;
+            font-family: "Times New Roman";
+            padding: 20px;
+            border-style: solid;
+        }
+        
+        #btn1 {
+            font-size: 30px;
+            font-family: "sans serif";
+        }
+        
+        #hid1 {
+            position: absolute;
+            margin-top: -60px;
+            left: 400px;
+            display: none;
+        }
+        
+        #hid2 {
+            position: absolute;
+            margin-top: -60px;
+            left: 400px;
+        }
+        
+        #alert {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    {{>navbar}}
+    <h1 id="heading1" text align="center">REGISTER/SIGN IN</h1>
+    <h2 id="heading2" text align="center">Already have an account? <a href="/Users/rakshith/Documents/mernbackend/templates/views/login.hbs">Login here</a> </h2>
+    <div id="div1">
+        <form action = "/users" method="POST">
+            <input id="email" type="text" placeholder="Your Email" name="email" onkeyup="validate()"/> <br>
+            <label id="lb1" style="color:red ;visibility:hidden" ;>Invalid</label><br>
+            <input id="password" type="password" placeholder=" Your Password" name="password" /><br> <br>
+            <span class="eye" onclick="toggle_eye()">
+            <i id="hid1" class="fa fa-eye"></i>
+            <i id="hid2" class="fa fa-eye-slash"></i>
+            </span>
+            <input id="confirm_password" type="password" name ="confirmpassword" placeholder=" Confirm Password" onkeyup="check(this)" /><br>
+            <error id="alert"></error>
+            <button type = "submit" id="btn1" onclick="validate()">REGISTER</button>
+        </form>
+    </div>
+
+</body>
+<script type="text/javascript">
+    function validate() {
+        var text = document.getElementById("email").value;
+        var regs = /^([a-z A-Z 0-9\.-]+)@([a-z 0-9 -]+).([a-z]{2,20})$/;
+        if (regs.test(text)) {
+            document.getElementById("lb1").innerHTML = "Valid";
+            document.getElementById("lb1").style.visibility = "visible";
+            document.getElementById("lb1").style.color = "green";
+        } else {
+            document.getElementById("lb1").innerHTML = "Invalid email";
+            document.getElementById("lb1").style.visibility = "visible";
+            document.getElementById("lb1").style.color = "orange";
+        }
+
+
+    }
+
+    function toggle_eye() {
+        var a = document.getElementById("password");
+        var b = document.getElementById("hid1");
+        var c = document.getElementById("hid2");
+        if (a.type == "password") {
+            a.type = "text";
+            b.style.display = "block";
+            c.style.display = "none";
+
+        } else {
+            a.type = "password";
+            b.style.display = "none";
+            c.style.display = "block";
+
+        }
+    }
+
+    function check(elem) {
+        var password1 = document.getElementById("password");
+        if (elem.value.length > 9) {
+            if (elem.value != password1.value) {
+                document.getElementById("alert").innerHTML = "Invalid registeration";
+            } else {
+                document.getElementById("alert").innerHTML = "";
+            }
+        }
+    }
+</script>
+
+</html>

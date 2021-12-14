@@ -1,0 +1,244 @@
+<html>
+
+<head>
+    <title>
+    </title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+     
+
+    <style>
+        
+        .center {
+            
+            margin-left: 45%;
+            margin-right: auto;
+            margin-top: -8;
+            height: 35%;
+            width: 40%;
+            border-radius: 50%;
+
+
+
+
+        }
+
+        #companys {
+            display: block;
+            margin-left: 87%;
+            margin-right: auto;
+           position: ;
+           margin-top:-240;
+
+
+
+
+        }
+
+        #company {
+            font-size: larger;
+            background-color: rgb(245, 141, 6);
+            border: "10px solid black";
+          
+
+        }
+
+        #buttons {
+            margin-right: 500;
+            margin-right: auto;
+            margin-top: -100;
+            float: left;
+            margin-left: -1200;
+            height: 50%;
+            width: 150%;
+            margin-top: 90;
+            position: relative;
+            width: 300
+        }
+
+        button {
+            position: relative;
+            padding: 1px;
+            background-color: black;
+            border: 10 px blue;
+            color: white;
+
+        }
+
+        #div1 {
+
+
+            position: absolute;
+
+            top: 300px;
+            margin-left: 50px;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+       
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+       
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+       
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+
+        #navtag {
+            margin-left: -1200px;
+            margin-top: 100;
+        }
+        a{
+            color:rgb(250, 120, 14);
+        }
+        
+
+
+
+        
+    </style>
+    <header>
+    
+    
+    <div class="center">   
+    <img src="https://yt3.ggpht.com/eq63I_6Q9UBtcPmNsBNPDAcQynuq3sxOKcTGll565DGvkdZlo4_OuVt6TwgPQV-EgAuTTQGECQ=s176-c-k-c0x00ffffff-no-rj" height="50%" width="60%" margin-top="10%" margin-left="20px" border-radius="50%">
+    </div>
+        
+        <div id="companys" margin-left="40px" margin-top="14%"  >
+            <form>
+                <select id="company" >
+                    <option value="nothing" selected="selected">Select a Company</option>
+                    <option value="https://www.indiratrade.com/webinar">INDIRA</option>
+                    <option value="https://speedtrader.com/webinars/">
+                        SPEEDTRADER</option>
+                    <option value="https://marketsmithindia.com/mstool/webinar.jsp">MarketSmith</option>
+                    <option value="https://investarindia.com/education/upcoming-live-webinars">INVESTAR
+                    </option>
+                    <option value="https://stockedge.com/Webinars">STOCK EDGE</option>
+                    <option value="https://www.techsmith.com/blog/record-webinar/">TechSmith</option>
+                    <option
+                        value="https://www.elearnmarkets.com/?utm_source=microsoft.com&utm_medium=cpc&utm_campaign=branding-search&msclkid=debe7ee037e7136a5ef41f71c028e666">
+                        elearnmarkets</a>
+                    </option>
+                    <option value="https://www.hdfcsec.com/upcoming-webinar-hdfc-securities">HDFC securities</a>
+                    </option>
+
+
+                </select>
+            </form>
+            </div>
+            <nav style="font-weight:bold;margin-left:0.5%;margin-top:-3%;color:rgb(231, 206, 175)">
+                <a  href="/">HOME</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/register.hbs">ABOUT</a>&nbsp&nbsp&nbsp<a
+                    href="/Users/rakshith/Documents/mernbackend/templates/views/stocks.hbs">STOCKS</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/education.hbs">EDUCATION</a>&nbsp&nbsp&nbsp<a
+                    href="/Users/rakshith/Documents/mernbackend/templates/views/market.hbs">MARKET
+                    DATA</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/broker.hbs">BROKERS</a>
+                <div id="navbar" style="margin-left: 73%;margin-top: -0.9%;"><a
+                        href="/Users/rakshith/Documents/mernbackend/templates/views/register.hbs">REGISTER</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/login.hbs">LOGIN</a> 
+                 </div>       
+            </nav>
+
+            
+          
+
+
+            <script>
+                var url = document.getElementById("company");
+                url.onchange = function () {
+                    var userOption = this.options[this.selectedIndex];
+                    if (userOption.value != "nothing") {
+                        window.open(userOption.value, "company names page", "");
+                    }
+                }
+                
+            </script>
+
+        
+    </header>
+</head>

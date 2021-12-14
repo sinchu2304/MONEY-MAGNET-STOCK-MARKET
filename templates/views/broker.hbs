@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Trusted Brokers</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <style>
+        body{
+  background-image: url("https://img.freepik.com/free-vector/green-sand-paper_53876-86281.jpg?size=626&ext=jpg");
+  
+  background-attachment: fixed;
+ 
+        }
+        .advertise1{
+            
+            width:auto;
+            height:auto;
+            
+        }
+        .advertise2{
+            width:30px;
+            height:20px;
+        }
+        .advertise3{
+            position: absolute;
+            left: 600px;
+            top:1000px;
+
+            width:auto;
+            height:auto;
+        }
+        .advertise4{
+            position:absolute;
+            left: 900px;
+            height:5px;
+            width:5px;
+
+
+        }
+        .advertise5{
+            position:absolute;
+            left:1200px;
+        }
+        #trusted{
+            margin-right:-4px;
+            margin-top: -5px;
+        }
+        
+    </style>
+    
+         
+ 
+</head>
+<body>
+    
+    <nav style="font-weight:bold;margin-left:5%;margin-top:2% ">
+        <a href="/">HOME</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/about.hbs">ABOUT</a>&nbsp&nbsp&nbsp<a
+                    href="/Users/rakshith/Documents/mernbackend/templates/views/stocks.hbs">STOCKS</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/education.hbs">EDUCATION</a>&nbsp&nbsp&nbsp<a
+                    href="/Users/rakshith/Documents/mernbackend/templates/views/market.hbs">MARKET
+                    DATA</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/broker.hbs">BROKERS</a>
+                <div id="navbar" style="margin-left: 65%;margin-top: -0.9%;"><a
+                        href="/Users/rakshith/Documents/mernbackend/templates/views/register.hbs">REGISTER</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/login.hbs">LOGIN</a> 
+                 </div>  
+                     
+            </nav>
+        
+ 
+    <div id="contents"></div> </br>
+    
+    <a class="advertise1" href="https://invest.naga.com/trade-with-naga-autocopy/?reason=400&is_flexible=true&utm_source=investing.com&utm_medium=logo&utm_campaign=Directory&utm_content=Broker-button" ><img src="https://www.gpwinfostrefa.pl/wp-content/uploads/2020/10/nagalogo.png"></a> 
+    <a  class="advertise2" href="https://int.legacyfx.com/content/Lps/green-chart-v4/landing.html?tag=Investing&tag1=&transaction_id=1024eb9611db7b26eabdcce983d338&aff_id=1006&UTM_creative=EN_legacy_green-chart_reg-up&sub_aff=Investing_FindaBroker-May21"><img  src="https://int.legacyfx.com/Content/Images/img-intro-new-logo01.png"></a> 
+    <a  class="advertise3" href="https://www.liteforex.eu/?utm_source=investing&utm_medium=banner&utm_campaign=investing"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkWkmWkAoff40K5tg8Fabmra4SspP33yq4JNs_n-T6UctDZzl6__rj_jqr7j9I_kFk1p0&usqp=CAU"></a>
+    <a  class="advertise4" href="https://lp.avatrade.com/trading-v8/crypto?mode=mobile-reg-open&cid=20211110172635ae4dc2ae_01_0_0&tag=51298&tag2=&group=cryptocurrencies&description=visitors"><img src="https://forexsuggest.com/wp-content/uploads/2021/02/avatrade-logo-2.png"></a>
+    <a class="advertise5"  href="https://www.etoro.com/?utm_medium=Media&utm_source=62273&utm_content=0&utm_serial=&utm_campaign=&utm_term=&dclid=CjkKEQiA-K2MBhCb6aOGo-25k5QBEiQAg8VYQvAtWN6njBJjOAXWCIg0fTAsRloKGZrCyoTTaMk-eczw_wcB"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCHN5QMUUFCqMILMVVBR-lqn_TNVjgPPYMpZA9-xm6aNP63re77l6WsCIpIkXtx0pn1NA&usqp=CAU"></a>
+        <script type="text/babel">
+        class Photo extends React.Component{
+            render(){
+                
+                var divStyle={flexBasis: 110,backgroundColor:"#fffae6",color:"#ffcc00",fontSize:50,fontWeight:"bold"};
+                return(
+                    <div style={divStyle}>
+                        <img src={this.props.link} />
+                        
+                    </div>
+                );
+            }
+        }
+        class Title extends React.Component{
+            render(){
+                var divStyle={width: 300,flex: "0 0 50px", margin: 5,backgroundColor:"#ffeb99",color:"#e6b800", fontSize:20,fontWeight:"bold" };
+                return(
+                    <div style={divStyle}>
+                        <a href={this.props.link}>{this.props.name}</a>
+                        </div>
+                );
+            }
+        }class Description extends React.Component{
+            render(){
+                
+
+                var divStyle={width: 300,flex: "0 0 50px", margin: 3,backgroundColor:"#d9d9d9",color:"gray",fontSize:"10",fontWeight:"bold" };
+                return(
+                    <div style={divStyle}>
+                        <p>{this.props.link}</p>
+</div>
+                );
+            }
+        }
+        class ID extends React.Component{
+            render(){
+                var divStyle={display: "flex",flexDirection: "column",flexWrap: "wrap", height: 200, width: 500, border:"3px dotted black", padding:40 };
+                var sty1={display: "flex",flexDirection: "column"};
+                var sty2={ position:"absolute",left:"750px",bottom:"0px",top:"90px",display: "flex",flexDirection: "column"};
+                return(
+                    <div>
+                    <div style={sty1}>
+                        <caption><h1 id="trusted" >TRUSTED BROKERS</h1></caption>
+                        
+                <div style={divStyle}>
+                    
+
+                    <Photo link="https://media-exp1.licdn.com/dms/image/C4E0BAQGBgqbtSOw8pQ/company-logo_200_200/0/1624541269414?e=2159024400&v=beta&t=4D8dsoqi0XHxcwT68dMJSbBYurqzTdV59am9wGNw2vk"/>
+                    <Title link="https://capital.com/" name="Capital.com"/>
+                    <Description link="Capital.com - with market-leading spreads and zero commission, you can make a move on 2,000 of the world s most popular indices, shares and currency pairs on the web and on mobile.
+
+
+ "/>
+                    </div>
+                    <br/>
+                    <div style={divStyle}>
+                    <Photo link="https://media-exp1.licdn.com/dms/image/C4E0BAQHr7D-aBV8abg/company-logo_200_200/0/1606123956936?e=2159024400&v=beta&t=_2LzD2mJF-iwoUHlpJWwlfRvaGsubQGzR3aoH7WOFg0"/>
+                    <Title link="https://www.xm.com/" name="XM GLOBAL LIMITED"/>
+                    <Description link="XM Group is an award-winning Forex and CFD Broker serving clients from 196 countries in more than 30 languages."/>
+                    </div>
+                    <br/>
+                    <div style={divStyle}>
+                    <Photo link="https://responsive.fxempire.com/v7/_fximages_/staging/square/octafx.png"/>
+                    <Title link="https://www.octafx.com/" name="OctaFX"/>
+                    <Description link="OctaFX is a forex broker recognized worldwide. OctaFX provides forex brokerage"/>
+                    </div>
+                    
+                    
+
+                    
+                    </div>
+                    <div style={sty2}>
+                        
+                <div style={divStyle}>
+                    
+
+                    <Photo link="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaOZHsVP3iY-xJcYOOPR6fTebdVJX94sl5HfbdYldOOYuSe6FC5pu22O23H7J7lVVjDoA&usqp=CAU"/>
+                    <Title link="https://sites.google.com/view/icmks/trang-ch%E1%BB%A7" name="IC MARKETS"/>
+                    <Description link="International Capital Markets is a leading CFD, Forex, Futures, Options and Share"/>
+                    </div>
+                    <br/>
+                    <div style={divStyle}>
+                    <Photo link="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkUZl-bICyVa5J1P60dZzG5JBQXwqJUVF5Gonbo7W1k9FVWmjzEgFczvU9fc2v1BjB-bc&usqp=CAU"/>
+                    <Title link="https://sites.google.com/view/sign-up-exness/trang-ch%E1%BB%A7" name="EXNESS"/>
+                    <Description link="Exness Group is a leading forex broker that has been providing forex trading services as well as opportunities to enter CFDs on Futures since 2008.
+
+ "/>
+                    </div>
+                    <br/>
+                    <div style={divStyle}>
+                    <Photo link="https://qph.fs.quoracdn.net/main-qimg-30789df5a11b92537b53ecd2feb9be9a-lq"/>
+                    <Title link="https://www.fpmarkets.com/int/" name="FP MARKETS"/>
+                    <Description link="FP Markets is your one-stop destination to trade CFDs across Forex, Shares, Indices, Commodities and Cryptocurrencies."/>
+                    
+                    
+
+                    
+                    </div>
+
+                    
+                    
+
+                    </div>
+                </div>
+                )
+            }
+        }
+            
+            ReactDOM.render(<ID/>,
+            document.getElementById('contents'));
+        </script>
+
+        
+</body>
+</html>

@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <title>
+    </title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<style>
+    #maincontainer{
+        position:absolute;
+        margin-top:40px;
+    }
+</style>
+
+<body>
+    <style>
+        body {
+            background-color: #f5f0e1;
+        }
+    </style>
+
+    <nav style="font-weight:bold;margin-left:7%;margin-top:3% ">
+                <a href="/">HOME</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/about.hbs">ABOUT</a>&nbsp&nbsp&nbsp<a
+                    href="/Users/rakshith/Documents/mernbackend/templates/views/stocks.hbs">STOCKS</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/education.hbs">EDUCATION</a>&nbsp&nbsp&nbsp<a
+                    href="/Users/rakshith/Documents/mernbackend/templates/views/market.hbs">MARKET
+                    DATA</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/broker.hbs">BROKERS</a>
+                <div id="navbar" style="margin-left: 80%;margin-top: -0.9%;"><a
+                        href="/Users/rakshith/Documents/mernbackend/templates/views/register.hbs">REGISTER</a>&nbsp&nbsp&nbsp<a href="/Users/rakshith/Documents/mernbackend/templates/views/login.hbs">LOGIN</a> 
+                 </div>       
+            </nav>
+
+    <div id="main container">
+    </div>
+    <script type="text/babel">
+
+        var id = document.getElementById("main container");
+        class History extends React.Component {
+            render() {
+                const bodyStyle = {
+                    //backGroundColor: "#ffe106",
+                    border: "2px solid black",
+                    borderRadius: '10px',
+                    marginTop:20,
+
+                    height: 500,
+                    width: 600,
+                    backgroundColor: "#3b4d61",
+                    marginLeft: 90
+
+
+
+                };
+                var h1style = { color: "white", textAlign: "center" };
+                var dlstyle = { position: "relative", fontWeight: "bold", fontFamily: "Garamond", fontsize: "29", color: "white" };
+                var imgstyle = { position: "relative", height: 195, width: 500, marginLeft: 50 };
+
+
+
+
+                return (
+                    <div style={bodyStyle}>
+                        <h1 style={h1style}>HISTORY</h1>
+
+                        <dd>
+                            <dl style={dlstyle}><p>The history of the share market of India dates back to 1875.Our website has been launched in the year 2005.</p><p>It has been designed by Shri Raghunandan Rao.He graduated in the California University and persued his MBA in Cambridge University.He was always enthusiastic in the field of marketing and always wanted to encourage the people to get more knowledge regarding their investment in stocks.</p><p>He was able to provide the basic structure for our website.The website gets updated every second to provide the current stats of marketing arena.
+                            </p></dl>
+                        </dd>
+                        <img style={imgstyle} src="https://kiowacountypress.net/sites/default/files/field/image/promo_64j1_business_-_chart_graph_stock_market_-_istock_-_monsitj.jpg"></img>
+
+
+
+                    </div>
+                );
+            }
+        }
+        class Terms extends React.Component {
+            render() {
+                const termStyle = {
+                    position: "relative",
+
+                    boder: "10px solid blue",
+                    borderRadius: 10,
+                    height: 300,
+                    width: 600,
+                    backgroundColor: "#ef9d10",
+                    marginLeft: 90
+                };
+                var h2style = { textAlign: "center", color: "white" };
+                var ulstyle = { color: "white", fontSize: 20, fontFamily: "Times New Roman" };
+
+
+                return (
+                    <div style={termStyle}>
+                        <h1 style={h2style}>TERMS AND CONDITIONS</h1>
+                        <ul style={ulstyle}>
+                            <li>You must first log on to cleartax invest</li>
+                            <li>You then pick the mutual fund house from the list of fund houses</li>
+                            <li>It helps if you select the mutual fund scheme depending on financial goals and risk tolerance</li>
+                            <li>You must choose the amount you want to invest in the mutual fund scheme and pick the mode as either One Time or Monthly SIP</li>
+                            <li>It helps if you fill up the important details such as name, email address, mobile number and then complete the transaction.</li>
+                        </ul>
+                    </div>
+                )
+            }
+        }
+        class Award extends React.Component {
+            render() {
+                const awardStyle = {
+                    boder: '10px solid blue',
+                    borderRadius: 10,
+                    position: "relative",
+                    marginLeft: 800,
+                    backgroundColor: "#3b4d61",
+
+                    height: 830,
+                    width: 650,
+                    marginTop: -850,
+                    marginRight: 10
+
+
+                };
+                var h3style = { textAlign: "center", color: "white" };
+                var ul2style = { color: "white", fontSize: 20, fontFamily: "Times New Roman" };
+                var img1style = { position: "relative", width: 550, height: 300, marginLeft: 50 };
+                var img2style = { position: "relative", width: 550, height: 300, marginLeft: 50, marginTop: 40 };
+                return (
+                    <div style={awardStyle}>
+                        <h1 style={h3style}>AWARDS AND RECOGNITIONS</h1>
+                        <ul style={ul2style}>
+                            <li>Global recognition for the undisputable stats update.</li>
+                            <li>"The most searched website" title by the Indian marketing enterprise.</li>
+                            <li>Most preferred website by the sensex bureau.</li>
+                        </ul>
+                        <img style={img1style} src="https://lh3.googleusercontent.com/bJq5HyzizECqwj3L5dVLZGN6XIKao7lMhqag7PoNaKoC-roeuEcAW0_lGZnu93nptJANe_E=s123"></img>
+                        <img style={img2style} src="https://lh3.googleusercontent.com/2WvWw4ptq7hYdY8-lIXVGN98kyBmVLpZE_IcleDe2YSkSm_uDbuU7cgFgJBUCT4DqmH7=s120"></img>
+
+                    </div>
+
+                )
+            }
+        }
+        class Whole extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <History />
+                        <Terms />
+                        <Award />
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<Whole />, id);
+
+
+
+    </script>
+</body>
+
+</html>
